@@ -1,6 +1,25 @@
-import './assets/main.css'
-
-import { createApp } from 'vue'
+import { createApp } from "vue";
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// views
+import Home from './views/Home.vue'
+import { createWebHistory, createRouter } from "vue-router";
+
+// styles
+
+import "@fortawesome/fontawesome-free/css/all.min.css";
+
+const routes = [
+  {
+    path: "/",
+    component: Home,
+  },
+  { path: "/:pathMatch(.*)*", redirect: "/" },
+];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
+
+createApp(App).use(router).mount("#app");
