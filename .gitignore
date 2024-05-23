@@ -29,4 +29,3 @@ coverage
 *.tsbuildinfo
 /vue.config.js
 /.vscode
-/dist

@@ -29,7 +29,7 @@
                 Vite
               </h1>
               <h1 class="text-black text-4xl">
-                Tailwind
+                Tailwind 2
               </h1>
               <h1 class="text-black text-4xl">
                 GitHub Pages
