@@ -2,11 +2,19 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{vue,js,ts,jsx,tsx}",
-  ],  theme: {
+    "./src/**/*.{vue,js,ts,jsx,tsx,json}",
+  ],  
+  safelist: [
+    'text-2xl',
+    'text-3xl',
+    {
+      pattern: /text-gray-800/,
+    },
+  ],
+  theme: {
     extend: {
       animation: {
-        'bounce-slow': 'bounce 1.5s ease-in infinite alternate',
+        'bounce-slow': 'bounce 1.5s ease-in infinite alternate'
       }
     },
   },

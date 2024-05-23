@@ -3,7 +3,7 @@
   <main ref="el" class="h-full">
     <button class="hidden" ref="scrollButton" />
     <section class="bg-white h-full">
-      <div class="container mx-10 px-4 h-full">
+      <div class="w-full px-10 h-full">
         <div class="flex flex-wrap items-center h-full">
           <div class="w-1/2 text-left mr-auto ml-auto">
             <div class="pr-12">
@@ -14,37 +14,19 @@
                 Programmeur-analyste
               </p>
             </div>
-            <div class="pb-10 absolute bottom-0 inset-x-1/2">
-              <div ref="bounceSkills" class="text-gray-600 p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
-                <a title="Go to skills" href="#skills"><i class="fa-solid fa-arrow-down"></i></a>
-              </div>
-            </div>
           </div>
           <div class="w-1/2 text-right mr-auto ml-auto">
-            <div class="pr-12">
-              <h1 class="text-black text-4xl">
-                Vue 3
-              </h1>
-              <h1 class="text-black text-4xl">
-                Vite
-              </h1>
-              <h1 class="text-black text-4xl">
-                Tailwind 2
-              </h1>
-              <h1 class="text-black text-4xl">
-                GitHub Pages
-              </h1>
-            </div>
-            <div class="pb-10 absolute bottom-0 inset-x-1/2">
+            <CycleCarousel :list="technologies"/>
+          </div>
+          <!-- <div class="pb-10 absolute bottom-0 inset-x-1/2">
               <div ref="bounceSkills" class="text-gray-600 p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
                 <a title="Go to skills" href="#skills"><i class="fa-solid fa-arrow-down"></i></a>
               </div>
-            </div>
-          </div>
+            </div> -->
         </div>
       </div>
     </section>
-    <section id="skills" class="pb-20 bg-red-600 h-full">
+    <!-- <section id="skills" class="pb-20 bg-red-600 h-full">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
           <div class="pt-6 w-full md:w-4/12 px-4 text-center">
@@ -129,13 +111,14 @@
           </div>
         </div>
       </div>
-    </section>
-    <footer-component />
+    </section> -->
+    <!-- <footer-component /> -->
   </main>
 </template>
 <script lang="ts">
-import NavbarComponent from "../components/Navbar.vue";
-import FooterComponent from "../components/Footer.vue";
+import NavbarComponent  from "../components/Navbar.vue";
+import FooterComponent  from "../components/Footer.vue";
+import CycleCarousel from "../components/CycleCarousel.vue";
 
 export default {
   name: "landing-page",
@@ -146,9 +129,10 @@ export default {
 }
 </script>
 <script setup lang="ts">
-  import { ref, onMounted } from 'vue'
-  
+  import { ref, onMounted, computed } from 'vue'
+
   const bounceSkills = ref(null)
+  const technologies = computed(() => ['Vue 3 & Vite', 'Tailwind', 'GitHub', 'Three.js', '.net Framework', 'Xamarin / Maui', 'PHP', 'Python', 'SQL'])
 
   onMounted(() => {
     setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 2000)
