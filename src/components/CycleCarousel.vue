@@ -3,6 +3,14 @@
         <li v-for="item in list">{{ item }}</li>
     </ul>
 </template>
+<style scoped>
+    #cycle-list li {
+        transition: font-size 1s, color 0.5s, margin-top 0.5s, margin-bottom 0.5s, line-height 0.5s linear;
+        margin-top: 1rem !important;
+        margin-bottom: 1rem !important;
+        line-height: 2.25rem !important;
+    }
+</style>
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 const cycleList = ref(null)
@@ -12,6 +20,18 @@ const props = defineProps({
         type: Array,
         required: true
     },
+    startIndex: {
+        type: Number,
+        default: 0
+    },
+    startShade: {
+        type: Number,
+        default: 900
+    },
+    interval: {
+        type: Number,
+        default: 1500
+    },
     color: {
         type: String,
         default: 'gray'
@@ -19,23 +39,24 @@ const props = defineProps({
 })
 
 onMounted(() => {
-    let elements = cycleList.value.children;
-    let count = 0;
+    const elements = cycleList.value.children;
+    const totalCount = elements.length
+
+    let count = props.startIndex;
 
     function cycleArray() {
-        let current = elements[count];
-        let totalCount = elements.length
-
-        current.classList = `text-${props.color}-800/100 text-3xl`;
-        const faded = `text-${props.color}-800/15`;
-
-        for (let i = 0; i < totalCount; i++) {
+        const current = elements[count];
+        const faded = `text-${props.color}-${props.startShade}/${shade(totalCount)}`;
+        
+        for (var i = 0; i < totalCount; i++) {
             const t = elements[i];
 
-            if (t !== current) {
+            if (t === current) {
+                t.classList = 'text-forest-green text-2xl';
+            }
+            else {
                 const range = Math.abs(count - i);
-                const gradient = round(100 - ((100 / 800) * (100 * range)));
-                const className = `text-${props.color}-800/${gradient >= 5 ? gradient : 5}`;
+                const className = `text-${props.color}-${props.startShade}/${shade(range)}`;
 
                 t.classList = className;
 
@@ -54,7 +75,13 @@ onMounted(() => {
     }
 
     cycleArray()
-    setInterval(cycleArray, 1500);
+    setInterval(cycleArray, props.interval);
+
+    function shade(x: number)
+    {
+        var shade = round(100 - ((100 / totalCount) * (x + 1)));
+        return shade >= 5 ? shade : 5;
+    }
 
     function round(x: number) {
         if (x % 5 == 0) {

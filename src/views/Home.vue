@@ -2,15 +2,22 @@
   <navbar-component />
   <main ref="el" class="h-full">
     <section class="bg-white h-full">
-      <div class="container mx-auto h-full">
+      <div class="container mx-auto px-4 h-full">
         <div class="flex flex-wrap items-center h-full">
           <div class="w-1/2 text-left mx-auto">
             <div class="pr-12">
               <p class="text-black text-4xl">
-                Maxime Aubin-Forest
+                Maxime <span class="text-forest-green">Aubin-Forest</span>
               </p>
-              <p class="text-lg text-gray-300">
+              <p class="text-lg text-black">
                 Programmeur-analyste
+              </p>
+              <p class="text-lg text-black">
+                Programmeur-analyste possédant plus de sept ans
+                d'expérience en web, application Windows et mobile.
+                Expertise en solutions back-end et front- end.
+                <br>
+                Je maîtrise le français et l'anglais.
               </p>
             </div>
           </div>
@@ -19,49 +26,129 @@
           </div>
           <!-- <div class="pb-10 absolute bottom-0 inset-x-1/2">
             <div ref="bounceSkills"
-              class="text-gray-600 p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
-              <a title="Go to skills" href="#skills"><i class="fa-solid fa-arrow-down"></i></a>
+              class="p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
+              <a title="Go to skills" href="#skills"><i class="text-forest-green fa-solid fa-arrow-down"></i></a>
             </div>
           </div> -->
         </div>
       </div>
     </section>
-    <!-- <section class="bg-red-100 h-full">
-      <div class="container mx-auto h-full">
+    <section class="bg-red-100 h-full">
+      <div class="container mx-auto px-4 h-full">
         <div class="flex flex-wrap items-center h-full">
-          <div class="w-1/2 text-left mx-auto">
-            <div
-              class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100">
-              <i class="fas fa-user-friends text-xl"></i>
-            </div>
-            <h3 class="text-3xl mb-2 font-semibold leading-normal">
-              Lorem ipsum </h3>
-            <p class="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-700">
-              Lorem ipsum
-            </p>
-          </div>
-          <div class="w-1/2 text-left mx-auto">
-            <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-pink-600">
-              <img alt="..."
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
-                class="w-full align-middle rounded-t-lg" />
-              <blockquote class="relative p-8 mb-4">
-                <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                  class="absolute left-0 w-full block" style="height: 95px; top: -94px;">
-                  <polygon points="-30,95 583,95 583,65" class="text-pink-600 fill-current"></polygon>
-                </svg>
-                <h4 class="text-xl font-bold text-white">
-                  Top Notch Services
-                </h4>
-                <p class="text-md font-light mt-2 text-white">
-                  Lorem ipsum
-                </p>
-              </blockquote>
-            </div>
+          <div class="mx-auto text-justify">
+            <table class="table-auto">
+              <thead>
+                <tr>
+                  <th class="align-top"></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="align-top">
+                    <p class="text-2xl">Éducation</p>
+                  </td>
+                  <td class="align-top"></td>
+                  <td class="align-top">
+                    <p>Jan. 2015 - Mai 2016</p>
+                    <p class="text-forest-green">Cégep du Vieux-Montréal</p>
+                    <ul>
+                      <li>Formation collégial complétée</li>
+                      <li>Technique de l'informatique en formation intensive</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="align-top">
+                    <p class="text-2xl">Expérience profesionnelle</p>
+                  </td>
+                  <td class="align-top"></td>
+                  <td class="align-top">
+                    <p>Juin 2023 - Mai 2024</p>
+                    <p>
+                      <span class="text-forest-green">NMédia</span> - Programmeur-analyste
+                      <br>
+                      Drummondville | Télétravail
+                      <br>
+                      Programmation diversifiée sous mandats clients
+                      en plusieurs équipes. Plusieurs projets en
+                      parallèle.
+                    </p>
+                    <ul>
+                      <li>
+                        Programmation en C# sous .net 3.1 à 8 et en
+                        Angular, Vue 3 & Nuxt.js au niveau du front-end;</li>
+                      <li>
+                        Rapport SSRS, développement de procédure
+                        stockée, optimisation SQL, usage du pivot,
+                        création de vues;
+                      </li>
+                      <li>Développement mobile sous Maui;</li>
+                      <li>Fonctionnement agile sous Jira;</li>
+                      <li>Le poste a été coupé.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="align-top"></td>
+                  <td class="align-top">
+                    <p>Oct. 2018 - Jan. 2023</p>
+                    <p>
+                      <span class="text-forest-green">Daway Solutions</span> - Programmeur-analyste
+                      <br>
+                      Brossard | Télétravail
+                      <br>
+                      Programmeur principal du projet Sass de
+                      conformité d'asphalte et de béton, incluant
+                      l'analyse technique, la programmation, le
+                      support client et la nomenclature devops.
+                    </p>
+                    <ul>
+                      <li>Programmation en C# sous .net 4.8 en MVC et
+                        en HTML, CSS, jQuery au niveau du front-end;
+                      </li>
+                      <li>
+                        Approche code first sous Entity Framework;
+                        Base de données en MS SQL;
+                      </li>
+                      <li>Génération de rapports sous Stimulsoft;</li>
+                      <li>Dirigé une équipe de 2 programmeurs;</li>
+                      <li>Départ pour raisons personnelles.</li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="align-top"></td>
+                  <td class="align-top">
+                    <p>Nov. 2016 - Oct. 2018</p>
+                    <p>
+                      <span class="text-forest-green">Gameloft</span> - Programmeur-analyste
+                      <br>
+                      Montréal | Hybride
+                      <br>
+                      Collaboration avec une équipe basée sur site
+                      et en Bulgarie. Disposition du temps entre
+                      programmation full stack et documentation.
+                    </p>
+                    <ul>
+                      <li>Programmation en PHP sur yii et en Python sur
+                        tornado framework et en HTML, CSS, jQuery au
+                        niveau du front-end;</li>
+                      <li>Base de données en mySQL;</li>
+                      <li>Fonctionnement agile sur GitLab.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </div>
       </div>
-    </section> -->
+    </section>
     <!-- <footer-component /> -->
   </main>
 </template>
@@ -81,10 +168,10 @@ export default {
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
 
-const bounceSkills = ref(null)
-const technologies = computed(() => ['Vue 3 & Vite', 'Tailwind', 'GitHub', 'Three.js', '.net Framework', 'Xamarin / Maui', 'PHP', 'Python', 'SQL'])
+// const bounceSkills = ref(null)
+const technologies = computed(() => ['C# | .net Framework | DevExpress', 'Vue 3 | Vite | Nuxt', 'Javascript | jQuery', 'HTML | CSS | Tailwind', 'GitHub | GitLab | Azure Devops', 'Jira | Confluence', 'Xamarin | Maui', 'PHP | Yii Framework', 'Python | Tornado Framework', 'SQL | mySQL', 'Stimulsoft Reports | SSRS'])
 
-onMounted(() => {
-  setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 1500)
-})
+// onMounted(() => {
+//   setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 1500)
+// })
 </script>
