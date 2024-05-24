@@ -1,18 +1,24 @@
 <template>
-  <nav class="top-0 absolute z-50 w-full flex flex-wrap items-center justify-between px-2 py-3 ">
-    <div class="container px-4 mx-auto flex flex-wrap items-center justify-between">
-      <div class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none"
+  <nav class="top-0 absolute w-full items-center justify-between ">
+    <div class="container mx-auto flex flex-wrap items-center justify-between">
+      <div class="xl:flex flex-grow items-center bg-white xl:bg-transparent xl:shadow-none"
         v-bind:class="{ 'hidden': !showMenu, 'block': showMenu }">
-        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+        <ul class="pr-12 flex flex-col xl:flex-row list-none xl:ml-auto">
           <li class="flex items-center">
-            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://www.linkedin.com/in/maxime-a-375134a4/"><i class="lg:text-gray-300 text-gray-500 fa-brands fa-linkedin text-lg leading-lg "></i><span
-                class="lg:hidden inline-block ml-2">Share</span></a>
+            <a class="px-3 py-4 flex items-center" href="mailto:maxime.af@outlook.com" title="Courriel"><i
+                class="xl:text-gray-300 text-gray-500 fa-solid fa-envelope text-3xl leading-xl "></i><span
+                class="xl:hidden inline-block ml-2">Share</span></a>
           </li>
           <li class="flex items-center">
-            <a class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://github.com/MaxForest"><i class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "></i><span
-                class="lg:hidden inline-block ml-2">Star</span></a>
+            <a class="px-3 py-4 flex items-center" title="LinkedIn"
+              href="https://www.linkedin.com/in/maxime-a-375134a4/"><i
+                class="xl:text-gray-300 text-gray-500 fa-brands fa-linkedin text-3xl leading-xl "></i><span
+                class="xl:hidden inline-block ml-2">Share</span></a>
+          </li>
+          <li class="flex items-center">
+            <a class="px-3 py-4 flex items-center" title="GitHub" href="https://github.com/MaxForest"><i
+                class="xl:text-gray-300 text-gray-500 fab fa-github text-3xl leading-xl "></i><span
+                class="xl:hidden inline-block ml-2">Star</span></a>
           </li>
         </ul>
       </div>

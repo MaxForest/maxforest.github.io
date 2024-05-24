@@ -4,7 +4,7 @@
 
 @layer base {
     html {
-        font-family:"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+        font-family:"Century Gothic", "Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
         height: 100%;
     }
   }
@@ -18,6 +18,9 @@ a{
     box-sizing: border-box;
 }
 
-#technologies-list h1 {
-    transition: font-size 1s, color 0.5s, display 1s;
+#cycle-list li {
+    transition: font-size 1s, color 0.5s, margin-top 0.5s, margin-bottom 0.5s, line-height 0.5s linear;
+    margin-top: 1rem !important;
+    margin-bottom: 1rem !important;
+    line-height: 2.25rem !important;
 }
