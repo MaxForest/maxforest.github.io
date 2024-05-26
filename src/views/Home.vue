@@ -5,7 +5,7 @@
       <div class="container mx-auto px-4 h-screen">
         <div class="flex flex-wrap items-center h-screen">
           <div class="sm:w-screen md:w-1/2 text-left mx-auto">
-            <div class="pr-12">
+            <div>
               <p class="text-black text-4xl">
                 Maxime <span class="text-forest-green">Aubin-Forest</span>
               </p>
