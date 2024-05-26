@@ -2,6 +2,7 @@
   <nav class="top-0 absolute pt-10 w-full">
     <div class="container mx-auto px-4">
       <div class="flex flex-grow items-center float-right">
+        <LanguageSwitcher />
         <ul class="pr-12 flex flex-row list-none xl:ml-auto">
           <li class="flex items-center">
             <a class="px-3 py-4 flex items-center" href="mailto:maxime.af@outlook.com" title="Courriel"><i
@@ -21,3 +22,7 @@
     </div>
   </nav>
 </template>
+
+<script setup>
+import LanguageSwitcher from './LanguageSwitcher.vue';
+</script>

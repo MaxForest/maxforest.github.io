@@ -1,0 +1,54 @@
+{
+    "analyst-programmer": "Analyst programmer",
+    "principal-programmer": "Lead programmer",
+    "web-developper": "Web developper",
+    "resume": "Hello! Welcome to my portfolio, hosted on GitHub Pages. It is built with Vue 3, Vite, Tailwind and i18n. Above you will find above a link to send me an email, my LinkedIn profile, or even my Github page (yes, the code for this site is there too!).",
+    "subresume": "",
+    "education": "Education",
+    "formationCompleted": "Completed college education",
+    "techniqueInformatique": "Computer technology in intensive training",
+    "experience": "Experience",
+    "remote": "Remote",
+    "hybrid": "Hybrid",
+    "jobs": [
+        {
+            "company":"NMédia",
+            "date":"June 2023 - May 2024",
+            "city":"Drummondville - Remote",
+            "description": "Diversified programming under client mandates dispatched in several teams. Several projects in parallel.",
+            "li": [
+                "Programming in C# under .net 3.1 to 8 and in Angular, Vue 3 & Nuxt.js at the front-end level;",
+                "SSRS report, stored procedure development, SQL optimization, use of pivot, view creation;",
+                "Mobile development in Maui;",
+                "Fonctionnement agile sous Jira;",
+                "The position was cut."
+            ]
+        },
+        {
+            "company":"Daway Solutions",
+            "date":"Oct. 2018 - Jan. 2023",
+            "city":"Brossard - Remote",
+            "description": "Lead programmer for the Sass asphalt and concrete compliance project, including technical analysis, programming, customer support and devops BOM.",
+            "li": [
+                "Programming in C# under .net 4.8 in MVC and in HTML, CSS, jQuery at the front-end level;",
+                "Code first approach under Entity Framework; Database in MS SQL;",
+                "MS SQL database;",
+                "Generating reports using Stimulsoft;",
+                "Led a team of 2 programmers;",
+                "Departure for personal reasons."
+            ]
+        },
+        {
+            "company":"Gameloft",
+            "date":"Nov. 2016 - Oct 2018",
+            "city":"Montreal - Hybrid",
+            "description": "Collaboration with a team based on site and in Bulgaria. Layout of time between full stack programming and documentation.",
+            "li": [
+                "Programming in PHP on yii and in Python on tornado framework;",
+                "HTML, CSS, jQuery at the front-end level;",
+                "mySQL database;",
+                "Agile operation on GitLab."
+            ]
+        }
+    ]
+}

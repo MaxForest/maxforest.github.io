@@ -14,7 +14,7 @@ export default {
   theme: {
     colors: {
       'forest-green':'rgb(112 173 71)',
-      gray: colors.slate,
+      gray: colors.slate
     },
     extend: {
       animation: {

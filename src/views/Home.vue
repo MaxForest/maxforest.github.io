@@ -1,46 +1,41 @@
 <template>
   <navbar-component />
-  <main ref="el" class="h-full">
-    <section class="bg-white h-full">
-      <div class="container mx-auto px-4 h-full">
-        <div class="flex flex-wrap items-center h-full">
-          <div class="w-1/2 text-left mx-auto">
+  <main ref="el" class="h-screen">
+    <section class="bg-white h-screen">
+      <div class="container mx-auto px-4 h-screen">
+        <div class="flex flex-wrap items-center h-screen">
+          <div class="sm:w-screen md:w-1/2 text-left mx-auto">
             <div class="pr-12">
               <p class="text-black text-4xl">
                 Maxime <span class="text-forest-green">Aubin-Forest</span>
               </p>
               <p class="text-lg text-black">
-                Programmeur-analyste
+                {{ t('resume') }}
               </p>
               <p class="text-lg text-black">
-                Programmeur-analyste possédant plus de sept ans
-                d'expérience en web, application Windows et mobile.
-                Expertise en solutions back-end et front- end.
-                <br>
-                Je maîtrise le français et l'anglais.
+                {{ t('subresume') }}
               </p>
             </div>
           </div>
-          <div class="w-1/2 text-right mx-auto">
+          <div class="sm:w-screen md:w-1/2 text-right mx-auto">
             <CycleCarousel :list="technologies" />
           </div>
-          <!-- <div class="pb-10 absolute bottom-0 inset-x-1/2">
+          <div class="pb-10 absolute bottom-0 inset-x-1/2">
             <div ref="bounceSkills"
               class="p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
-              <a title="Go to skills" href="#skills"><i class="text-forest-green fa-solid fa-arrow-down"></i></a>
+              <a title="Go to skills" href="#resume"><i class="text-forest-green fa-solid fa-arrow-down"></i></a>
             </div>
-          </div> -->
+          </div>
         </div>
       </div>
     </section>
-    <section class="bg-red-100 h-full">
-      <div class="container mx-auto px-4 h-full">
-        <div class="flex flex-wrap items-center h-full">
+    <section id="resume" class="bg-red-100 h-screen">
+      <div class="container mx-auto px-4 h-screen">
+        <div class="flex flex-wrap items-center h-screen">
           <div class="mx-auto text-justify">
             <table class="table-auto">
               <thead>
                 <tr>
-                  <th class="align-top"></th>
                   <th></th>
                   <th></th>
                 </tr>
@@ -48,98 +43,40 @@
               <tbody>
                 <tr>
                   <td class="align-top">
-                    <p class="text-2xl">Éducation</p>
+                    <p class="text-2xl">{{ t('education') }}</p>
                   </td>
+                  <td class="align-top"></td>
+                </tr>
+                <tr>
                   <td class="align-top"></td>
                   <td class="align-top">
                     <p>Jan. 2015 - Mai 2016</p>
                     <p class="text-forest-green">Cégep du Vieux-Montréal</p>
                     <ul>
-                      <li>Formation collégial complétée</li>
-                      <li>Technique de l'informatique en formation intensive</li>
+                      <li>{{ t('formationCompleted') }}</li>
+                      <li>{{ t('techniqueInformatique') }}</li>
                     </ul>
                   </td>
                 </tr>
                 <tr>
                   <td class="align-top">
-                    <p class="text-2xl">Expérience profesionnelle</p>
+                    <p class="text-2xl">{{ t('experience') }}</p>
                   </td>
-                  <td class="align-top"></td>
-                  <td class="align-top">
-                    <p>Juin 2023 - Mai 2024</p>
-                    <p>
-                      <span class="text-forest-green">NMédia</span> - Programmeur-analyste
-                      <br>
-                      Drummondville | Télétravail
-                      <br>
-                      Programmation diversifiée sous mandats clients
-                      en plusieurs équipes. Plusieurs projets en
-                      parallèle.
-                    </p>
-                    <ul>
-                      <li>
-                        Programmation en C# sous .net 3.1 à 8 et en
-                        Angular, Vue 3 & Nuxt.js au niveau du front-end;</li>
-                      <li>
-                        Rapport SSRS, développement de procédure
-                        stockée, optimisation SQL, usage du pivot,
-                        création de vues;
-                      </li>
-                      <li>Développement mobile sous Maui;</li>
-                      <li>Fonctionnement agile sous Jira;</li>
-                      <li>Le poste a été coupé.</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
                   <td></td>
-                  <td class="align-top"></td>
-                  <td class="align-top">
-                    <p>Oct. 2018 - Jan. 2023</p>
-                    <p>
-                      <span class="text-forest-green">Daway Solutions</span> - Programmeur-analyste
-                      <br>
-                      Brossard | Télétravail
-                      <br>
-                      Programmeur principal du projet Sass de
-                      conformité d'asphalte et de béton, incluant
-                      l'analyse technique, la programmation, le
-                      support client et la nomenclature devops.
-                    </p>
-                    <ul>
-                      <li>Programmation en C# sous .net 4.8 en MVC et
-                        en HTML, CSS, jQuery au niveau du front-end;
-                      </li>
-                      <li>
-                        Approche code first sous Entity Framework;
-                        Base de données en MS SQL;
-                      </li>
-                      <li>Génération de rapports sous Stimulsoft;</li>
-                      <li>Dirigé une équipe de 2 programmeurs;</li>
-                      <li>Départ pour raisons personnelles.</li>
-                    </ul>
-                  </td>
                 </tr>
-                <tr>
+                <tr v-for="job in jobs">
                   <td></td>
-                  <td class="align-top"></td>
                   <td class="align-top">
-                    <p>Nov. 2016 - Oct. 2018</p>
+                    <p>{{ rt(job.date) }}</p>
                     <p>
-                      <span class="text-forest-green">Gameloft</span> - Programmeur-analyste
+                      <span class="text-forest-green">{{ rt(job.company) }}</span> - {{ t('analyst-programmer') }}
                       <br>
-                      Montréal | Hybride
+                      {{ rt(job.city) }}
                       <br>
-                      Collaboration avec une équipe basée sur site
-                      et en Bulgarie. Disposition du temps entre
-                      programmation full stack et documentation.
+                      {{ rt(job.description) }}
                     </p>
                     <ul>
-                      <li>Programmation en PHP sur yii et en Python sur
-                        tornado framework et en HTML, CSS, jQuery au
-                        niveau du front-end;</li>
-                      <li>Base de données en mySQL;</li>
-                      <li>Fonctionnement agile sur GitLab.</li>
+                      <li v-for="bullet in job.li">{{ rt(bullet) }}</li>
                     </ul>
                   </td>
                 </tr>
@@ -167,11 +104,25 @@ export default {
 </script>
 <script setup lang="ts">
 import { ref, onMounted, computed } from 'vue'
+import { useI18n } from 'vue-i18n';
 
-// const bounceSkills = ref(null)
-const technologies = computed(() => ['C# | .net Framework | DevExpress', 'Vue 3 | Vite | Nuxt', 'Javascript | jQuery', 'HTML | CSS | Tailwind', 'GitHub | GitLab | Azure Devops', 'Jira | Confluence', 'Xamarin | Maui', 'PHP | Yii Framework', 'Python | Tornado Framework', 'SQL | mySQL', 'Stimulsoft Reports | SSRS'])
+const { t, tm, rt } = useI18n();
+const jobs:any[] = tm('jobs')
 
-// onMounted(() => {
-//   setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 1500)
-// })
+const bounceSkills = ref(null)
+const technologies = computed(() => ['C# | .net Framework | DevExpress',
+  'Vue 3 | Vite | Nuxt',
+  'Javascript | jQuery',
+  'HTML | CSS | Tailwind',
+  'GitHub | GitLab | Azure Devops',
+  'Jira | Confluence',
+  'Xamarin | Maui',
+  'PHP | Yii Framework',
+  'Python | Tornado Framework',
+  'SQL | mySQL',
+  'Stimulsoft Reports | SSRS'])
+
+onMounted(() => {
+  setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 1500)
+})
 </script>
