@@ -21,8 +21,8 @@
             <CycleCarousel :list="technologies" />
           </div>
           <div class="pb-10 absolute bottom-0 inset-x-1/2">
-            <div ref="bounceSkills"
-              class="p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
+            <div
+              class="animate-bounce-slow p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
               <a title="Go to skills" href="#resume"><i class="text-forest-green fa-solid fa-arrow-down"></i></a>
             </div>
           </div>
@@ -33,7 +33,7 @@
       <div class="container mx-auto px-4 h-screen">
         <div class="flex flex-wrap items-center h-screen">
           <div class="mx-auto text-justify">
-            <table class="table-auto">
+            <table class="border-spacing-6">
               <thead>
                 <tr>
                   <th></th>
@@ -48,9 +48,10 @@
                   <td class="align-top"></td>
                 </tr>
                 <tr>
-                  <td class="align-top"></td>
-                  <td class="align-top">
-                    <p>Jan. 2015 - Mai 2016</p>
+                  <td class="align-top mx-auto">
+                    <p>{{ t('collegeDate') }}</p>
+                  </td>
+                  <td class="align-top mx-auto">
                     <p class="text-forest-green">Cégep du Vieux-Montréal</p>
                     <ul>
                       <li>{{ t('formationCompleted') }}</li>
@@ -65,9 +66,10 @@
                   <td></td>
                 </tr>
                 <tr v-for="job in jobs">
-                  <td></td>
                   <td class="align-top">
                     <p>{{ rt(job.date) }}</p>
+                  </td>
+                  <td class="align-top">
                     <p>
                       <span class="text-forest-green">{{ rt(job.company) }}</span> - {{ t('analyst-programmer') }}
                       <br>
@@ -103,13 +105,12 @@ export default {
 }
 </script>
 <script setup lang="ts">
-import { ref, onMounted, computed } from 'vue'
+import { computed } from 'vue'
 import { useI18n } from 'vue-i18n';
 
 const { t, tm, rt } = useI18n();
-const jobs:any[] = tm('jobs')
+const jobs: any[] = tm('jobs')
 
-const bounceSkills = ref(null)
 const technologies = computed(() => ['C# | .net Framework | DevExpress',
   'Vue 3 | Vite | Nuxt',
   'Javascript | jQuery',
@@ -121,8 +122,4 @@ const technologies = computed(() => ['C# | .net Framework | DevExpress',
   'Python | Tornado Framework',
   'SQL | mySQL',
   'Stimulsoft Reports | SSRS'])
-
-onMounted(() => {
-  setTimeout(() => bounceSkills.value.classList.add('animate-bounce-slow'), 1500)
-})
 </script>
