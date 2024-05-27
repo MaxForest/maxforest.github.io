@@ -2,88 +2,66 @@
   <navbar-component />
   <main ref="el" class="h-screen">
     <section class="bg-white h-screen">
-      <div class="container mx-auto px-4 h-screen">
+      <div class="container mx-auto px-10 h-screen">
         <div class="flex flex-wrap items-center h-screen">
-          <div class="sm:w-screen md:w-1/2 text-left mx-auto">
+          <div class="sm:w-screen lg:w-1/2 md:text-left">
             <div>
-              <p class="text-black text-4xl">
+              <p class="text-2xl lg:text-3xl text-black">
                 Maxime <span class="text-forest-green">Aubin-Forest</span>
               </p>
-              <p class="text-lg text-black">
+              <p class="text-md lg:text-lg text-black">
                 {{ t('resume') }}
               </p>
-              <p class="text-lg text-black">
+              <p class="text-md lg:text-lg text-black">
                 {{ t('subresume') }}
               </p>
             </div>
           </div>
-          <div class="sm:w-screen md:w-1/2 text-right mx-auto">
+          <div class="hidden lg:block sm:w-screen lg:w-1/2 md:text-right">
             <CycleCarousel :list="technologies" />
-          </div>
-          <div class="pb-10 absolute bottom-0 inset-x-1/2">
-            <div
-              class="animate-bounce-slow p-3 text-center inline-flex items-center justify-center shadow-lg w-16 h-16 rounded-full bg-gray-100 -translate-y-1/4">
-              <a title="Go to skills" href="#resume"><i class="text-forest-green fa-solid fa-arrow-down"></i></a>
-            </div>
           </div>
         </div>
       </div>
     </section>
     <section id="resume" class="bg-red-100 h-screen">
-      <div class="container mx-auto px-4 h-screen">
+      <div class="container mx-auto px-10 h-screen">
         <div class="flex flex-wrap items-center h-screen">
           <div class="mx-auto text-justify">
-            <table class="border-spacing-6">
-              <thead>
-                <tr>
-                  <th></th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="align-top">
-                    <p class="text-2xl">{{ t('education') }}</p>
-                  </td>
-                  <td class="align-top"></td>
-                </tr>
-                <tr>
-                  <td class="align-top mx-auto">
-                    <p>{{ t('collegeDate') }}</p>
-                  </td>
-                  <td class="align-top mx-auto">
-                    <p class="text-forest-green">Cégep du Vieux-Montréal</p>
-                    <ul>
-                      <li>{{ t('formationCompleted') }}</li>
-                      <li>{{ t('techniqueInformatique') }}</li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                  <td class="align-top">
-                    <p class="text-2xl">{{ t('experience') }}</p>
-                  </td>
-                  <td></td>
-                </tr>
-                <tr v-for="job in jobs">
-                  <td class="align-top">
-                    <p>{{ rt(job.date) }}</p>
-                  </td>
-                  <td class="align-top">
-                    <p>
-                      <span class="text-forest-green">{{ rt(job.company) }}</span> - {{ t('analyst-programmer') }}
-                      <br>
-                      {{ rt(job.city) }}
-                      <br>
-                      {{ rt(job.description) }}
-                    </p>
-                    <ul>
-                      <li v-for="bullet in job.li">{{ rt(bullet) }}</li>
-                    </ul>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="col-span-3 align-top">
+                <p class="text-2xl">{{ t('education') }}</p>
+              </div>
+              <div class="align-top col-span-3 md:col-span-1">
+                <p>{{ t('collegeDate') }}</p>
+              </div>
+              <div class="align-top col-span-3 md:col-span-2">
+                <p class="text-forest-green">Cégep du Vieux-Montréal</p>
+                <ul>
+                  <li>{{ t('formationCompleted') }}</li>
+                  <li>{{ t('techniqueInformatique') }}</li>
+                </ul>
+              </div>
+              <div class="col-span-3 align-top">
+                <p class="text-2xl">{{ t('experience') }}</p>
+              </div>
+              <template v-for="job in jobs">
+                <div class="align-top col-span-3 md:col-span-1">
+                  <p>{{ rt(job.date) }}</p>
+                </div>
+                <div class="align-top col-span-3 md:col-span-2">
+                  <p>
+                    <span class="text-forest-green">{{ rt(job.company) }}</span> - {{ t('analyst-programmer') }}
+                    <br>
+                    {{ rt(job.city) }}
+                    <br>
+                    {{ rt(job.description) }}
+                  </p>
+                  <ul>
+                    <li v-for="bullet in job.li">{{ rt(bullet) }}</li>
+                  </ul>
+                </div>
+              </template>
+            </div>
           </div>
         </div>
       </div>

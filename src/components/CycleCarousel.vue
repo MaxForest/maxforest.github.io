@@ -52,7 +52,7 @@ onMounted(() => {
             const t = elements[i];
 
             if (t === current) {
-                t.classList = 'text-forest-green text-2xl';
+                t.classList = 'text-forest-green lg:text-lg';
             }
             else {
                 const range = Math.abs(count - i);

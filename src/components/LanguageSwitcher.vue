@@ -1,6 +1,6 @@
 <template>
-    <a class="{{ `${locale.value === 'fr' ? 'hidden' : '' } cursor-pointer px-5 py-2 text-2xl text-gray-300 hover:text-forest-green border-0 bg-transparent` }}" @click="setLanguage('fr')">Français</a>
-    <a class="{{ `${locale.value === 'en' ? 'hidden' : '' } cursor-pointer px-5 py-2 text-2xl text-gray-300 hover:text-forest-green border-0 bg-transparent` }}" @click="setLanguage('en')">English</a>
+    <a class="{{ `${locale.value === 'fr' ? 'hidden' : '' } cursor-pointer py-2 lg:text-lg text-gray-300 hover:text-forest-green border-0 bg-transparent` }}" @click="setLanguage('fr')">Français</a>
+    <a class="{{ `${locale.value === 'en' ? 'hidden' : '' } cursor-pointer px-5 py-2 lg:text-lg text-gray-300 hover:text-forest-green border-0 bg-transparent` }}" @click="setLanguage('en')">English</a>
 </template>
 
 <script setup lang="ts">
